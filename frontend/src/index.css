@@ -1,10 +1,95 @@
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Avenir';
+    font-weight: 300;
+    font-style: oblique;
+    src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-LightOblique.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-Book.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 400;
+  font-style: oblique;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-BookOblique.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-Roman.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 500;
+  font-style: oblique;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-Oblique.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 600;
+  font-style: oblique;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-MediumOblique.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 800;
+  font-style: normal;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-Heavy.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 800;
+  font-style: oblique;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-HeavyOblique.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 900;
+  font-style: normal;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-Black.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-weight: 900;
+  font-style: oblique;
+  src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-BlackOblique.otf) format('opentype');
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Avenir;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #1F1E1E;
 }
 
 code {

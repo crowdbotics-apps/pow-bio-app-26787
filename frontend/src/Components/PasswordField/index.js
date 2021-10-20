@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
-const PasswordField = () => {
+const PasswordField = ({ field }) => {
 
     const [passwordViewState, setPasswordViewState] = useState(false);
 
@@ -11,7 +11,7 @@ const PasswordField = () => {
     }
 
     return <div className="input-group">
-        <input type={passwordViewState ? "text" : "password"} className="form-control" id="password" placeholder="Password" />
+        <input type={passwordViewState ? "text" : "password"} className="form-control" placeholder="Password" {...field} />
         <div className="input-group-append">
             <span className="input-group-text" onClick={onShowPasswordClick}>
                 { passwordViewState ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}

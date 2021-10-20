@@ -2,7 +2,8 @@ import React from "react";
 import SignupPage from "../../Pages/SignupPage";
 
 const SignupContainer = () => {
-    return <SignupPage />
+    const onSubmit = data => console.log(data);
+    return <SignupPage onSubmit={onSubmit} />
 };
 
 export default SignupContainer;

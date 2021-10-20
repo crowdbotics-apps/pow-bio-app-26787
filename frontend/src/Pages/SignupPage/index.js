@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import PasswordField from "../../Components/PasswordField";
+import SubmitButton from "../../Components/SubmitButton";
 import AuthLayout from "../../Layouts/AuthLayout";
+import { AlternateOptionLink, BottomAlternateText } from "../../styles";
 
 const SignupPage = () => {
     return <AuthLayout pageTitle="Sign up">
@@ -19,12 +20,12 @@ const SignupPage = () => {
             </div>
 
             <div className="d-grid">
-                <button className="btn btn-primary" type="button">submit</button>
+                <SubmitButton>submit</SubmitButton>
             </div>
-
-            <p className="text-center mt-4">
-                Already have an account? <Link to="/login">Login</Link>
-            </p>
+            
+            <BottomAlternateText className="text-center mt-4">
+                Already have an account? <AlternateOptionLink to="/login">Login</AlternateOptionLink>
+            </BottomAlternateText>
         </form>
     </AuthLayout>
 };

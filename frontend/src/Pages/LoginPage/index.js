@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import PasswordField from "../../Components/PasswordField";
+import SubmitButton from "../../Components/SubmitButton";
 import AuthLayout from "../../Layouts/AuthLayout";
+import { AlternateOptionLink, BottomAlternateText } from "../../styles";
+import { ForgetPasswordText } from "./styles";
 
 const LoginPage = () => {
     return <AuthLayout pageTitle="Log in">
@@ -15,16 +17,16 @@ const LoginPage = () => {
             </div>
 
             <p className="text-end mb-5">
-                <Link to="/signup">Forget Password</Link>
+                <ForgetPasswordText to="/signup">Forget Password</ForgetPasswordText>
             </p>
 
             <div className="d-grid">
-                <button className="btn btn-primary" type="button">submit</button>
+                <SubmitButton>submit</SubmitButton>
             </div>
-
-            <p className="text-center mt-4">
-                Don’t have an account? <Link to="/signup">Sign up</Link>
-            </p>
+            
+            <BottomAlternateText className="text-center mt-4">
+                Don’t have an account? <AlternateOptionLink to="/signup">Sign up</AlternateOptionLink>
+            </BottomAlternateText>
         </form>
     </AuthLayout>
 };

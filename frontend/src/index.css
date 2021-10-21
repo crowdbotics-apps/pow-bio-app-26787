@@ -82,6 +82,12 @@
   src: local('Avenir'), url(./Assets/fonts/Avenir/AvenirLTStd-BlackOblique.otf) format('opentype');
 }
 
+@font-face {
+  font-family: 'BrandonGrotesque';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Avenir'), url(./Assets/fonts/brandon-grotesque/brandon-grotesque-black.otf) format('opentype');
+}
 
 body {
   margin: 0;

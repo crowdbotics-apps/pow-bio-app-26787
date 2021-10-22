@@ -51,6 +51,7 @@ LOCAL_APPS = [
     'home',
     'modules',
     'users.apps.UsersConfig',
+    'contact_us',
 ]
 THIRD_PARTY_APPS = [
     'rest_framework',
@@ -81,10 +82,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'pow_bio_app_26787.urls'
 
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -194,6 +197,7 @@ EMAIL_HOST_PASSWORD = env.str("SENDGRID_PASSWORD", "")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+DEFAULT_FROM_EMAIL = env.str("DEFAULT_FROM_EMAIL", "")
 
 # AWS S3 config
 AWS_ACCESS_KEY_ID = env.str("AWS_ACCESS_KEY_ID", "")
@@ -233,3 +237,5 @@ if DEBUG or not (EMAIL_HOST_USER and EMAIL_HOST_PASSWORD):
     if not DEBUG:
         logging.warning("You should setup `SENDGRID_USERNAME` and `SENDGRID_PASSWORD` env vars to send emails.")
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+INQUIRY_NOTIFICATION_EMAIL = 'awais.khan@crowdbotics.com'

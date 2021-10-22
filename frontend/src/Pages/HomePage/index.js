@@ -1,12 +1,11 @@
 import React from "react";
 import ContactUs from "./Sections/ContactUs";
+import FAQ from "./Sections/FAQ";
 
 const HomePage = () => {
     return <div>
-        <div className="container-xxl">
-            <div className="mt-4"></div>
+            <FAQ />
             <ContactUs />
-        </div>
         <section style={{ height: '48px', background: '#414141' }}></section>
     </div>
 };

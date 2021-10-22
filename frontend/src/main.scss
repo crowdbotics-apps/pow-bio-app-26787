@@ -16,6 +16,10 @@ $input-font-size: 16px;
 $input-border-radius: 8px;
 $input-height: 40px;
 
+$accordion-button-icon: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 11.5H13V9.5C13 8.95 12.55 8.5 12 8.5C11.45 8.5 11 8.95 11 9.5V11.5H9C8.45 11.5 8 11.95 8 12.5C8 13.05 8.45 13.5 9 13.5H11V15.5C11 16.05 11.45 16.5 12 16.5C12.55 16.5 13 16.05 13 15.5V13.5H15C15.55 13.5 16 13.05 16 12.5C16 11.95 15.55 11.5 15 11.5ZM12 20.5C7.589 20.5 4 16.911 4 12.5C4 8.089 7.589 4.5 12 4.5C16.411 4.5 20 8.089 20 12.5C20 16.911 16.411 20.5 12 20.5ZM12 2.5C6.486 2.5 2 6.986 2 12.5C2 18.014 6.486 22.5 12 22.5C17.514 22.5 22 18.014 22 12.5C22 6.986 17.514 2.5 12 2.5Z' fill='%23000093'/%3E%3C/svg%3E%0A");
+$accordion-button-active-icon: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 11.5H9C8.45 11.5 8 11.95 8 12.5C8 13.05 8.45 13.5 9 13.5H15C15.55 13.5 16 13.05 16 12.5C16 11.95 15.55 11.5 15 11.5ZM12 20.5C7.589 20.5 4 16.911 4 12.5C4 8.089 7.589 4.5 12 4.5C16.411 4.5 20 8.089 20 12.5C20 16.911 16.411 20.5 12 20.5ZM12 2.5C6.486 2.5 2 6.986 2 12.5C2 18.014 6.486 22.5 12 22.5C17.514 22.5 22 18.014 22 12.5C22 6.986 17.514 2.5 12 2.5Z' fill='%23000093'/%3E%3C/svg%3E%0A");
+
+
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap');
@@ -35,4 +39,50 @@ $input-height: 40px;
 
 .invalid-feedback {
   display: block;
+}
+
+
+.accordion-item {
+  margin-bottom: 32px;
+  background: #ADD65C;
+  border-radius: 8px;
+  border: none
+}
+
+.accordion-button {
+  background: #ADD65C !important;
+  border: none;
+  box-shadow: none !important;
+}
+
+.accordion-button {
+  padding: 12px 16px;
+  background: #ADD65C;
+  border-radius: 8px;
+
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+  
+  
+  /* blue-900 */
+  
+  color: #000093;
+}
+
+.accordion-body {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  /* or 27px */
+  
+  
+  /* gray-900 */
+  
+  color: #414141;
 }

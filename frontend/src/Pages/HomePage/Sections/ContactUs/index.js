@@ -1,17 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm, Controller } from "react-hook-form";
 import { Facebook, Instagram, LinkedIn } from '../../../../Components/Icons';
 import SocialMediaButton from '../../../../Components/SocialMediaButton';
 import { ContactUsFormContainer, Heading, Paragraph, Section } from './styles';
 import SubmitButton from '../../../../Components/SubmitButton';
+import { useDispatch, useSelector } from 'react-redux';
+import { apiContactUsRequest } from '../../../../Redux/actions/contactUs';
 
 const ContactUs = () => {
 
-    const { control, handleSubmit, formState: { errors } } = useForm();
+    const { control, handleSubmit, formState: { errors }, reset } = useForm();
+    const dispatch = useDispatch();
+    const state = useSelector(state => state.contactUs);
 
     const onSubmit = (data) => {
         console.log("Data: ", data);
+        dispatch(apiContactUsRequest(data));
     }
+
+    useEffect(() => {
+        console.log("State: ", state);
+        if (state.success) {
+            reset({
+                name: "",
+                phone: "",
+                email: "",
+                message: ""
+            });
+        }
+    }, [state]);
 
     return <Section>
         <div className="container-xxl">

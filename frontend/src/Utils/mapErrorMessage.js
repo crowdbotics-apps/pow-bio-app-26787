@@ -1,7 +1,7 @@
 const messageMap = {
     'Request failed with status code 400': {
         code: 400,
-        message: 'Unable to log in with provided credentials.',
+        message: 'Error: Unable to submit the inquiry.',
     },
     'Request failed with status code 403': {
         code: 403,
@@ -17,7 +17,9 @@ const messageMap = {
     },
 };
 
+
 export const mapErrorMessage = action => {
+    console.log("action: ", action);
     const message = action.response?.message;
     return messageMap[message]
         ? { ...messageMap[message], type: action.type }

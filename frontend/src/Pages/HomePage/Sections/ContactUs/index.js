@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useForm, Controller } from "react-hook-form";
+
 import { Facebook, Instagram, LinkedIn } from '../../../../Components/Icons';
 import SocialMediaButton from '../../../../Components/SocialMediaButton';
 import { ContactUsFormContainer, Heading, Paragraph, Section } from './styles';
@@ -70,7 +71,9 @@ const ContactUs = () => {
                                     control={control}
                                     defaultValue=""
                                     rules={{
-                                        required: "This field is required."
+                                        required: "This field is required.",
+                                        minLength: { value: 2, message: "Name must be more than two characters." },
+                                        maxLength: { value: 255, message: "Name should be less than 255 characters." }
                                     }}
                                     render={({ field }) => <input {...field} style={{ border: '1px solid #F2F2F2' }} className="form-control" placeholder="Name" />}
                                 />
@@ -87,7 +90,8 @@ const ContactUs = () => {
                                         pattern: {
                                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                                             message: "Enter a valid e-mail address",
-                                        }
+                                        },
+                                        maxLength: { value: 320, message: "Email should be less than 320 characters." }
                                     }}
                                     render={({ field }) => <input {...field} style={{ border: '1px solid #F2F2F2' }} className="form-control" placeholder="Email" />}
                                 />
@@ -100,7 +104,8 @@ const ContactUs = () => {
                                     control={control}
                                     defaultValue=""
                                     rules={{
-                                        required: "This field is required."
+                                        required: "This field is required.",
+                                        maxLength: { value: 15, message: "Phone number should be less than 15 characters." }
                                     }}
                                     render={({ field }) => <input {...field} style={{ border: '1px solid #F2F2F2' }} className="form-control" placeholder="Phone" />}
                                 />
@@ -113,7 +118,8 @@ const ContactUs = () => {
                                     control={control}
                                     defaultValue=""
                                     rules={{
-                                        required: "This field is required."
+                                        required: "This field is required.",
+                                        maxLength: { value: 5000, message: "Message should not be more than 5000 characters." }
                                     }}
                                     render={({ field }) => <textarea {...field} style={{ border: '1px solid #F2F2F2' }} class="form-control" rows="3" placeholder="Message"></textarea>}
                                 />
@@ -122,13 +128,25 @@ const ContactUs = () => {
                             </div>
 
                             <div className="mt-3">
-                                <SubmitButton style={{ width: "100%", background: '#000093', border: 'none' }} type="submit">submit</SubmitButton>
+                                <SubmitButton style={{ width: "100%", background: '#000093', border: 'none' }} type="submit" loading={state.isLoading}>submit</SubmitButton>
                             </div>
+
+                            { (state.success === true) || (state.error !== null) ?
+                                <div className="mt-3">
+                                    <div className={`alert text-center ${state.success ? 'alert-success' : 'alert-danger'}`} role="alert">
+                                        {state.success ?
+                                            'Your inquiry has been submitted successfully.'
+                                            : state.error.message}
+                                    </div>
+                                </div>
+                                : <></> }
+
                         </form>
                     </ContactUsFormContainer>
                 </div>
             </div>
         </div>
+
     </Section>
 }
 

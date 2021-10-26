@@ -13,9 +13,13 @@ import storage from 'redux-persist/lib/storage';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import contactUsApiReducer from './Redux/reducers/contactUs';
-import contactUsRootSaga from './Redux/sagas/contactUs';
 import loginApiReducer from './Redux/reducers/login';
+import signupApiReducer from './Redux/reducers/signup';
+
+import contactUsRootSaga from './Redux/sagas/contactUs';
 import loginRootSaga from './Redux/sagas/login';
+import signupRootSaga from './Redux/sagas/signup';
+
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -27,6 +31,7 @@ const authPersistConfig = {
 
 const store = createStore(combineReducers({
   auth: persistReducer(authPersistConfig, loginApiReducer),
+  signup: signupApiReducer,
   contactUs: contactUsApiReducer,
 }),
   applyMiddleware(sagaMiddleware)
@@ -36,6 +41,7 @@ let persistor = persistStore(store);
 
 sagaMiddleware.run(contactUsRootSaga);
 sagaMiddleware.run(loginRootSaga);
+sagaMiddleware.run(signupRootSaga);
 
 ReactDOM.render(
   <React.StrictMode>

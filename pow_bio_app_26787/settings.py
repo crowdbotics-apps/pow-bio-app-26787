@@ -241,4 +241,5 @@ if DEBUG or not (EMAIL_HOST_USER and EMAIL_HOST_PASSWORD):
         logging.warning("You should setup `SENDGRID_USERNAME` and `SENDGRID_PASSWORD` env vars to send emails.")
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-INQUIRY_NOTIFICATION_EMAIL = 'awais.khan@crowdbotics.com'
+INQUIRY_NOTIFICATION_EMAIL = env.str("INQUIRY_NOTIFICATION_EMAIL", "")
+

@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router";
 import SignupPage from "../../Pages/SignupPage";
 import { apiSignupRequest } from "../../Redux/actions/signup";
 
 const SignupContainer = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const auth = useSelector(state => state.auth);
 
     const onSubmit = data => {
@@ -14,7 +16,7 @@ const SignupContainer = () => {
     useEffect(() => {
         console.log("auth: ", auth);
         if (auth.token) {
-            console.log("Redicrect to User Area");
+            history.push('/dashboard');
         }
     }, [auth]);
 

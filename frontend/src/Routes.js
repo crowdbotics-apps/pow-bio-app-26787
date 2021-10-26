@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import DashboardContainer from "./Containers/DashboardContainer";
 
 import HomeContainer from "./Containers/HomeContainer";
 import LoginContainer from "./Containers/LoginContainer";
@@ -13,6 +14,9 @@ const Routes = () => {
                 </Route>
                 <Route path="/signup">
                     <SignupContainer />
+                </Route>
+                <Route path="/dashboard">
+                    <DashboardContainer />
                 </Route>
                 <Route path="/">
                     <HomeContainer />

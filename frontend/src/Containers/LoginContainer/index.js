@@ -1,17 +1,19 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router";
 
 import LoginPage from "../../Pages/LoginPage";
 import { apiLoginRequest } from "../../Redux/actions/login";
 
 const LoginContainer = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const auth = useSelector(state => state.auth);
 
     useEffect(() => {
         console.log("Auth: ", auth);
         if (auth.token) {
-            console.log("Redicrect to User Area");
+            history.push('/dashboard');
         }
     }, [auth]);
 

@@ -8,23 +8,41 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
+import { persistReducer, persistStore } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { PersistGate } from 'redux-persist/integration/react';
+
 import contactUsApiReducer from './Redux/reducers/contactUs';
 import contactUsRootSaga from './Redux/sagas/contactUs';
-
+import loginApiReducer from './Redux/reducers/login';
+import loginRootSaga from './Redux/sagas/login';
 
 const sagaMiddleware = createSagaMiddleware();
+
+const authPersistConfig = {
+  key: 'auth',
+  storage: storage,
+  whitelist: ['token']
+}
+
 const store = createStore(combineReducers({
+  auth: persistReducer(authPersistConfig, loginApiReducer),
   contactUs: contactUsApiReducer,
 }),
   applyMiddleware(sagaMiddleware)
 );
 
+let persistor = persistStore(store);
+
 sagaMiddleware.run(contactUsRootSaga);
+sagaMiddleware.run(loginRootSaga);
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

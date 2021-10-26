@@ -1,9 +1,17 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
 import LoginPage from "../../Pages/LoginPage";
+import { apiLoginRequest } from "../../Redux/actions/login";
 
 const LoginContainer = () => {
-    const onSubmit = data => console.log(data);
+    const dispatch = useDispatch();
+
+    const onSubmit = data => {
+        console.log("Data: ", data);
+        dispatch(apiLoginRequest(data));
+    };
+
     return <LoginPage onSubmit={onSubmit}/>;
 };
 

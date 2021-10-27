@@ -15,3 +15,8 @@ export const apiLoginRequestFailed = (response) => ({
     type: types.API_LOGIN_REQUEST_FAILED,
     response
 });
+
+
+export const clearToken = () => ({
+    type: types.CLEAR_TOKEN
+});

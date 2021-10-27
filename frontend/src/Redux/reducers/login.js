@@ -39,6 +39,14 @@ export default function loginApiReducer(state = INITIAL_STATE, action) {
                 error: mapErrorMessage(action)
             };
 
+        case types.CLEAR_TOKEN:
+            return {
+                isLoading: false,
+                success: false,
+                error: null,
+                token: null
+            };
+
         default:
             return state
     }

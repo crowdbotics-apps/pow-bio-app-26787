@@ -91,7 +91,7 @@
 
 body {
   margin: 0;
-  font-family: Avenir;
+  font-family: 'Open Sans', sans-serif !important;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

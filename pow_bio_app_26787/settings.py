@@ -90,7 +90,7 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
+        'DIRS': [os.path.join(SETTINGS_PATH, 'templates'), os.path.join(BASE_DIR, "frontend", "build")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -164,7 +164,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), os.path.join(BASE_DIR, "frontend", "build", "static")]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # allauth / users

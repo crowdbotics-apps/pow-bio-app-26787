@@ -15,8 +15,18 @@ RUN apt-get update \
   # WARNING: Changes to this file may cause unexpected behaviors when building the app.
   # Change it at your own risk.
 
+RUN curl -sL https://deb.nodesource.com/setup_15.x  | bash -
+RUN apt-get install -y nodejs
+RUN npm install -g yarn
+
 WORKDIR /opt/webapp
 COPY . .
+
+WORKDIR /opt/webapp/frontend
+RUN yarn install && yarn build
+
+WORKDIR /opt/webapp
+
 RUN pip3 install --no-cache-dir -q 'pipenv==2018.11.26' && pipenv install --deploy --system
 RUN python3 manage.py collectstatic --no-input
 

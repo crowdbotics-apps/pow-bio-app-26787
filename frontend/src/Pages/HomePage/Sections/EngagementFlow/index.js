@@ -3,6 +3,7 @@ import FlowStep from "../../../../Components/FlowStep";
 import { Heading, Section, EngagementFlowContainer } from "./styles";
 import { IntroMeetingIcon, NDAIcon, InboundItWorksheet,
     SignDocsStart, StatementOfWork } from "../../../../Components/Icons/styles";
+import Cube from "../../../../Components/Cube";
 
 const EngagementFlow = () => {
     return <Section>
@@ -38,6 +39,20 @@ const EngagementFlow = () => {
                 title="Statement of Work"
                 isLast={true}
                 description="Meet again with Pow to agree on deliverables, timeline, and goals" />
+
+            {/* left and right border cubes */}
+            <Cube size={100} borderRadius={20} style={{ bottom: '-50px', right: '65px' }} />
+            <Cube size={100} borderRadius={20} style={{ top: '-20px', left: '65px' }} />
+
+            {/* mini cubes */}
+            <Cube size={50} borderRadius={10} style={{ left: '150px', bottom: '76px' }} />
+            <Cube size={50} borderRadius={10} style={{ right: '150px', top: '76px' }} />
+
+            {/* Right medium cube */}
+            <Cube size={150} borderRadius={30} style={{ right: '-60px', bottom: '400px' }} />
+
+            {/* Left big cube */}
+            <Cube size={355} borderRadius={40} style={{ left: '-300px', bottom: '500px' }} />
 
         </EngagementFlowContainer>
     </Section>

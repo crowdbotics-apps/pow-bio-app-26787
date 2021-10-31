@@ -53,6 +53,13 @@ export const NumberCircle = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 100%;  
+    color: #E0572B;
 `;
 
 export const DownChevronContainer = styled.div`

@@ -13,7 +13,10 @@ const LoginPage = ({ onSubmit }) => {
 
     const auth = useSelector(state => state.auth);
 
-    return <AuthLayout pageTitle="Log in">
+    return <AuthLayout 
+            pageTitle="Log in"
+            bgColor="#3333A9"
+            >
         <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
 
@@ -28,7 +31,7 @@ const LoginPage = ({ onSubmit }) => {
                             message: "Enter a valid e-mail address",
                         }
                     }}
-                    render={({ field }) => <input {...field} className="form-control" placeholder="Email" />}
+                    render={({ field }) => <input {...field} className="form-control login-field" placeholder="Email" />}
                 />
 
                 {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
@@ -42,7 +45,7 @@ const LoginPage = ({ onSubmit }) => {
                     rules={{
                         required: "This field is required."
                     }}
-                    render={({ field }) => <PasswordField field={field} />}
+                    render={({ field }) => <PasswordField field={field} className="login-field" />}
                 />
 
                 {errors.password && <div className="invalid-feedback">{errors.password.message}</div>}
@@ -54,7 +57,7 @@ const LoginPage = ({ onSubmit }) => {
             </p>
 
             <div className="d-grid">
-                <SubmitButton type="submit" loading={auth.isLoading}>submit</SubmitButton>
+                <SubmitButton type="submit" style={{ background: '#3333A9' }} loading={auth.isLoading}>submit</SubmitButton>
             </div>
 
             { auth.error !== null ?
@@ -66,7 +69,7 @@ const LoginPage = ({ onSubmit }) => {
             : <></> }
 
             <BottomAlternateText className="text-center mt-4">
-                Don’t have an account? <AlternateOptionLink to="/signup">Sign up</AlternateOptionLink>
+                Don’t have an account? <AlternateOptionLink textColor="#3333A9" to="/signup">Sign up</AlternateOptionLink>
             </BottomAlternateText>
         </form>
     </AuthLayout>

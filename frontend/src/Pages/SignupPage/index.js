@@ -38,7 +38,11 @@ const SignupPage = ({ onSubmit }) => {
 
     const { control, handleSubmit, formState: { errors }, reset } = useForm();
 
-    return <AuthLayout pageTitle="Sign up">
+    return <AuthLayout
+            pageTitle="Sign up"
+            bgColor="#E0572B"
+            cubeColor="#D35028"
+            eclipseColor="#D14829">
         <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
 
@@ -49,7 +53,7 @@ const SignupPage = ({ onSubmit }) => {
                     rules={{
                         required: "This field is required.",
                     }}
-                    render={({ field }) => <input {...field} className="form-control" placeholder="Full Name" />}
+                    render={({ field }) => <input {...field} className="form-control signup-field" placeholder="Full Name" />}
                 />
 
                 {errors.full_name && <div className="invalid-feedback">{errors.full_name.message}</div>}
@@ -68,7 +72,7 @@ const SignupPage = ({ onSubmit }) => {
                             message: "Enter a valid e-mail address",
                         }
                     }}
-                    render={({ field }) => <input {...field} className="form-control" placeholder="Email" />}
+                    render={({ field }) => <input {...field} className="form-control signup-field" placeholder="Email" />}
                 />
 
                 {errors.email && <div className="invalid-feedback">{errors.email.message}</div>}
@@ -82,14 +86,14 @@ const SignupPage = ({ onSubmit }) => {
                     rules={{
                         required: "This field is required."
                     }}
-                    render={({ field }) => <PasswordField field={field} />}
+                    render={({ field }) => <PasswordField field={field} className="signup-field" />}
                 />
 
                 {errors.password && <div className="invalid-feedback">{errors.password.message}</div>}
             </div>
 
             <div className="d-grid">
-                <SubmitButton type="submit" loading={signup.isLoading}>submit</SubmitButton>
+                <SubmitButton type="submit" style={{ background: "#E0572B", border: 'none' }} loading={signup.isLoading}>submit</SubmitButton>
             </div>
 
 
@@ -102,7 +106,7 @@ const SignupPage = ({ onSubmit }) => {
                 : <></>}
 
             <BottomAlternateText className="text-center mt-4">
-                Already have an account? <AlternateOptionLink to="/login">Login</AlternateOptionLink>
+                Already have an account? <AlternateOptionLink textColor="#E0572B" to="/login">Login</AlternateOptionLink>
             </BottomAlternateText>
         </form>
     </AuthLayout>

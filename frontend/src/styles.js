@@ -16,7 +16,7 @@ export const AlternateOptionLink = styled(Link)`
     font-weight: 800;
     font-size: 16px;
     line-height: 150%;
-    color: #3F89E3;
+    color: ${props => props.textColor};
     text-decoration: none;
 `;
 

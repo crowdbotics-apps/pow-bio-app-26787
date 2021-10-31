@@ -22,7 +22,7 @@ export const AlternateOptionLink = styled(Link)`
 
 // section styles
 export const SectionHeading = styled.h1`
-    font-family: Brandon Grotesque;
+    font-family: 'BrandonGrotesque';
     font-style: normal;
     font-weight: normal;
     font-size: 24px;

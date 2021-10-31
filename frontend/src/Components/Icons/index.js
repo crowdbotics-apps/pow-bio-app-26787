@@ -71,3 +71,22 @@ export const LongLeftArrow = (props) => {
     )
 }
 
+export const DownChevron = (props) => {
+    return (
+      <svg
+        width={24}
+        height={24}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        {...props}
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12 16a.993.993 0 01-.64-.232l-6-5A1 1 0 116.64 9.23l5.37 4.476 5.363-4.315a1 1 0 011.254 1.559l-6 4.827A1 1 0 0112 16z"
+          fill="#82828D"
+        />
+      </svg>
+    )
+  }
+

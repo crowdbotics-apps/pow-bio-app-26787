@@ -3,13 +3,14 @@ import { VHRow, ColIllustration, IllustrationImage, FlexDiv,
         LogoImage, LoginHeading, AuthPageDescription, ContentWrapper,
         ContentInner, 
         BgCube,
-        CustomShapedEclipse, ZIndex5Div} from './styles';
+        CustomShapedEclipse, ZIndex5Div, BigFormCube} from './styles';
 import illustration from '../../Assets/images/login-illustration.png';
 import Logo from '../../Components/Logo';
 import { Link } from 'react-router-dom';
 
 const AuthLayout = ({ children, pageTitle, 
         bgColor="#3333A9",
+        bigCubeColor="rgba(224,87,43,0.07)",
         cubeColor="#1F1F65",
         eclipseColor="#292987" }) => {
     return <div className="container-xxl">
@@ -26,6 +27,7 @@ const AuthLayout = ({ children, pageTitle,
             </ColIllustration>
             <div className="col-12 col-md-6">
                 <ContentWrapper className="d-flex justify-content-center align-items-center">
+                    <BigFormCube bgColor={bigCubeColor} />
                     <ContentInner>
                         <LoginHeading textColor={bgColor}>{pageTitle}</LoginHeading>
                         <AuthPageDescription>By continuing, you're agreeing to our customer terms of service, privacy policy and cookie policy</AuthPageDescription>

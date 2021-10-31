@@ -26,6 +26,17 @@ export const BgCube = styled.div`
     z-index: 2;
 `;
 
+export const BigFormCube = styled.div`
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    background: ${props => props.bgColor};
+    border-radius: 40px;
+    transform: rotate(-40.57deg);
+    top: -16vw;
+    right: -5vw;
+`;
+
 export const CustomShapedEclipse = styled.div`
     position: absolute;
     width: 442px;
@@ -76,6 +87,7 @@ export const AuthPageDescription = styled.p`
 
 export const ContentWrapper = styled.div`
     height: 100vh;
+    position: relative;
 `;
 
 

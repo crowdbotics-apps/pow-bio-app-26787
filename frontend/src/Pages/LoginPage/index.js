@@ -16,6 +16,7 @@ const LoginPage = ({ onSubmit }) => {
     return <AuthLayout 
             pageTitle="Log in"
             bgColor="#3333A9"
+            bigCubeColor="rgba(169, 185, 226, 0.1)"
             >
         <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">

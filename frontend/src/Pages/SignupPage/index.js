@@ -42,7 +42,8 @@ const SignupPage = ({ onSubmit }) => {
             pageTitle="Sign up"
             bgColor="#E0572B"
             cubeColor="#D35028"
-            eclipseColor="#D14829">
+            eclipseColor="#D14829"
+            bigCubeColor="rgba(224, 87, 43, 0.07)">
         <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
 

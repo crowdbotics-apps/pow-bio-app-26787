@@ -16,13 +16,13 @@ export const AlternateOptionLink = styled(Link)`
     font-weight: 800;
     font-size: 16px;
     line-height: 150%;
-    color: #3F89E3;
+    color: ${props => props.textColor};
     text-decoration: none;
 `;
 
 // section styles
 export const SectionHeading = styled.h1`
-    font-family: Brandon Grotesque;
+    font-family: 'BrandonGrotesque';
     font-style: normal;
     font-weight: normal;
     font-size: 24px;

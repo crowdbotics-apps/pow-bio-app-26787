@@ -40,6 +40,14 @@ $alert-margin-bottom: 0;
   border-right: 0 !important;
 }
 
+input.login-field, span.login-field {
+  border-color: #3F89E3 !important;
+}
+
+input.signup-field, span.signup-field {
+  border-color: #99CC33 !important;
+}
+
 .invalid-feedback {
   display: block;
 }

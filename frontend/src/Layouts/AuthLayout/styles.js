@@ -5,13 +5,53 @@ export const VHRow = styled.div`
 `;
 
 export const ColIllustration = styled.div`
-    background: #F2F9E5;
+    background: ${props => props.bgColor};
+    position: relative;
+    overflow: hidden;
+`;
+
+export const ZIndex5Div = styled.div`
+    z-index: 5;
+`;
+
+export const BgCube = styled.div`
+    width: 277px;
+    height: 277px;
+    background: ${props => props.bgColor};
+    border-radius: 40px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%) rotate(-40.57deg);
+    z-index: 2;
+`;
+
+export const BigFormCube = styled.div`
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    background: ${props => props.bgColor};
+    border-radius: 40px;
+    transform: rotate(-40.57deg);
+    top: -16vw;
+    right: -5vw;
+`;
+
+export const CustomShapedEclipse = styled.div`
+    position: absolute;
+    width: 442px;
+    height: 339px;
+    background-image: url("data:image/svg+xml,%3Csvg width='442' height='339' viewBox='0 0 442 339' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M326.935 53.9158C241.965 38.7147 135.778 -21.8715 66.1071 8.31271C-3.56427 38.4969 -25.4576 102.306 36.0929 216.482C113.031 359.203 230.129 346.957 308.335 327.112C386.541 307.266 444.456 201.281 441.92 151.456C439.383 101.63 411.906 69.1168 326.935 53.9158Z' fill='${props => props.bgColor.replace("#", "%23")}'/%3E%3C/svg%3E%0A");
+    z-index: 1;
+    top: 65%;
+    left: 39%;
+    transform: translate(-50%, -50%);
 `;
 
 export const FlexDiv = styled.div`
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     height: 100%;
 `;
 
@@ -19,6 +59,7 @@ export const IllustrationImage = styled.img`
     width: 90%;
     max-width: 420px;
     display: block;
+    z-index: 3;
 `;
 
 export const LogoImage = styled.img`
@@ -27,7 +68,7 @@ export const LogoImage = styled.img`
 `;
 
 export const LoginHeading = styled.h1`
-    color: #3F89E3;
+    color: ${props => props.textColor};
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -45,7 +86,8 @@ export const AuthPageDescription = styled.p`
 `;
 
 export const ContentWrapper = styled.div`
-    height: 80vh;
+    height: 100vh;
+    position: relative;
 `;
 
 

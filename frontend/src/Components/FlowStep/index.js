@@ -10,7 +10,7 @@ const isEven = (value) => {
 }
 
 const FlowStep = ({ number, icon, title, description, isLast=false }) => {
-    return <div className={`container-xxl d-flex ${isEven(number) ? "justify-content-start" : "justify-content-end"}`}>
+    return <div className={`container-xxl d-flex pe-0 ps-0 ${isEven(number) ? "justify-content-start" : "justify-content-end"}`}>
         <FlowWrapper isEven={isEven(number)}>
             <FlowNumberFlex className="d-flex flex-column">
                 <NumberCircle>{number}</NumberCircle>

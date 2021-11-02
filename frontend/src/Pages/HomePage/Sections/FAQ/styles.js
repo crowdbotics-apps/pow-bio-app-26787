@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import { SectionHeading, SectionParagraph } from '../../../../styles';
 
+export const Container = styled.div`
+    width:95%;
+    max-width: 814px;
+    margin: 0 auto;
+`;
+
 export const Section = styled.section`
     padding-top: 104px;
     padding-bottom: 104px;
-    padding-left: 313px;
-    padding-right: 313px;
     background: #99CC33;
 `;
 

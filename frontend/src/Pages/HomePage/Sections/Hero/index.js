@@ -28,7 +28,7 @@ const Hero = () => {
             <Nav className="navbar navbar-light">
                 <div className="container-fluid">
                     <a className="navbar-brand"><Logo /></a>
-                    <div className="d-flex">
+                    <div className="d-flex mt-3 mt-sm-0">
                         { auth.token ? 
                             <button type="button" className="btn btn-outline-light" onClick={onLogout}>Logout</button>
                         :

@@ -40,7 +40,7 @@ const ContactUs = () => {
                         <Paragraph>
                             Venenatis faucibus tortor felis scelerisque est accumsan purus pellentesque tempus ultricies quam eu, tellus nibh vel mattis amet velit, facilisis
                         </Paragraph>
-                        <div className="mt-4">
+                        <div className="mt-4 mb-4">
                             <div className="mt-3">
                                 <SocialMediaButton
                                     text="Instagram"

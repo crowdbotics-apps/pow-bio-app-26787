@@ -4,6 +4,10 @@ import { SectionHeading, SectionParagraph } from '../../../../styles';
 export const Section = styled.section`
     background: #3F89E3;
     padding: 7rem 3rem;
+    
+    @media only screen and (max-width: 991.98px) {
+        padding: 7rem 0.5rem;
+    }
 `;
 
 export const Heading = styled(SectionHeading)`

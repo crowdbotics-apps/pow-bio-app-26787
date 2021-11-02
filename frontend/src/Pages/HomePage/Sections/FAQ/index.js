@@ -1,10 +1,10 @@
 import React from "react";
 import { Collapse } from 'bootstrap';
-import { Heading, Paragraph, Section } from "./styles";
+import { Heading, Paragraph, Section, Container } from "./styles";
 
 const FAQ = () => {
     return <Section>
-        <div className="container-xxl">
+        <Container>
             <Heading>Morbi sit eu diam vel nunc ac quisque tinc.</Heading>
             <Paragraph>
                 Diam, phasellus at mi donec nisi, porttitor est, dictumst justo, ac, nunc facilisis enim consequat ac nulla sem orci nec, lorem amet sed proin pretium elementum tortor lobortis faucibus eget velit.
@@ -52,7 +52,7 @@ const FAQ = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Container>
     </Section>
 };
 

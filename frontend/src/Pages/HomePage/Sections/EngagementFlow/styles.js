@@ -6,6 +6,12 @@ export const Section = styled.section`
     padding-top: 120px;
     padding-bottom: 120px;
     padding: 7.5rem 2rem;
+    overflow: hidden;
+
+    @media only screen and (max-width: 991.98px) {
+        padding: 7.5rem 0.5rem;
+    }
+
 `;
 
 export const Heading = styled(SectionHeading)`

@@ -25,6 +25,10 @@ export const Section = styled.section`
         height: 290vw;
         z-index: -1;
     }
+
+    @media only screen and (max-width: 991.98px) {
+        padding: 3rem 0.5rem;
+    }
 `;
 
 export const LinkButton = styled.button`

@@ -5,6 +5,10 @@ export const Section = styled.section`
     background: #FFFFFF;
     margin-top: 6rem;
     padding: 3rem 2rem;
+
+    @media only screen and (max-width: 991.98px) {
+        padding: 3rem 0.5rem;
+    }
 `;
 
 export const Heading = styled(SectionHeading)`
@@ -29,4 +33,5 @@ export const Paragraph = styled(SectionParagraph)`
 
 export const OurCompanyImage = styled.img`
     border-radius: 10px;
+    max-width: 100%;
 `;

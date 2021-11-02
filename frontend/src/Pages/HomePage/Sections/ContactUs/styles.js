@@ -6,6 +6,11 @@ export const Section = styled.section`
     padding-bottom: 120px;
     padding-left: 200px;
     padding-right: 200px;
+    
+    @media only screen and (max-width: 991.98px) {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
 `;
 
 export const Heading = styled(SectionHeading)`

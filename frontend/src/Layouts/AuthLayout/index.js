@@ -1,7 +1,7 @@
 import React from 'react';
 import { VHRow, ColIllustration, IllustrationImage, FlexDiv,
         LogoImage, LoginHeading, AuthPageDescription, ContentWrapper,
-        ContentInner, 
+        ContentInner, StyledLinkZindex,
         BgCube,
         CustomShapedEclipse, ZIndex5Div, BigFormCube} from './styles';
 import illustration from '../../Assets/images/login-illustration.png';
@@ -17,7 +17,7 @@ const AuthLayout = ({ children, pageTitle,
         <VHRow className="row">
             <ColIllustration bgColor={bgColor} className="col-12 col-md-6">
                 <ZIndex5Div className="container d-flex justify-content-start mt-3">
-                    <Link to="/"><Logo /></Link>
+                    <StyledLinkZindex to="/"><Logo /></StyledLinkZindex>
                 </ZIndex5Div>
                 <FlexDiv>
                     <IllustrationImage src={illustration} />

@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import {Link} from 'react-router-dom';
+
+export const StyledLinkZindex = styled(Link)`
+    display: block;
+    z-index: 6;
+`;
 
 export const VHRow = styled.div`
     height: 100vh;

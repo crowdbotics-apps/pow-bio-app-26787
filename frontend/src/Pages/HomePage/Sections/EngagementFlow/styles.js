@@ -12,6 +12,10 @@ export const Section = styled.section`
         padding: 7.5rem 0.5rem;
     }
 
+    @media only screen and (max-width: 767.98px) {
+        padding: 7.5rem 0rem;
+    }
+
 `;
 
 export const Heading = styled(SectionHeading)`

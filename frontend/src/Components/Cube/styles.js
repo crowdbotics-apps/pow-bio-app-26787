@@ -6,7 +6,8 @@ export const CubeDiv = styled.div`
     border-radius: ${props => props.borderRadius}px;
     background: #C5DCF7;
     transform: rotate(-135deg);
-    position: absolute;    
+    position: absolute;
+    z-index: -1;
 `;
 
 

@@ -9,6 +9,7 @@ export const Icon = styled.span`
     display: inline-block;
     width: 48px;
     height: 48px;
+    background-size: contain;
 `;
 
 export const IntroMeetingIcon = styled(Icon)`

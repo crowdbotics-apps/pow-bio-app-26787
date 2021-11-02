@@ -6,6 +6,10 @@ export const FlowContainer = styled.div`
 export const FlowDetailsContainer = styled.div`
     max-width: 290px;
     ${props => props.isEven ? 'margin-right: 80px;' : 'margin-left: 80px;'};
+
+    @media only screen and (max-width: 767.98px) {
+        ${props => props.isEven ? 'margin-right: 20px;' : 'margin-left: 20px;'};
+    }
 `;
 
 export const FlowHeading = styled.h3`
@@ -34,6 +38,7 @@ export const FlowWrapper = styled.div`
     width: 50%;
     position: relative;
     display: flex;
+    z-index: 5;
     flex-direction: ${props => props.isEven ? 'row-reverse' : 'row'};
     ${props => props.isEven ? 'right: -30.5px;' : 'left: -30.5px;'};
 `;

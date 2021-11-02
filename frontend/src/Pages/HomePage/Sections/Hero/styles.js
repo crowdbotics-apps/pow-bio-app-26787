@@ -28,6 +28,7 @@ export const Section = styled.section`
 
     @media only screen and (max-width: 991.98px) {
         padding: 3rem 0.5rem;
+        padding-bottom: 8rem;
     }
 `;
 
@@ -65,4 +66,12 @@ export const FermentationPlantImage = styled.img`
     display: block;
     width: 100%;
     margin-top: -8rem;
+    @media only screen and (max-width: 991.98px) {
+        margin-top: -4rem;
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        margin-top: 2rem;
+    }
 `;
+

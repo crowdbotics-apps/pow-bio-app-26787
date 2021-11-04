@@ -35,3 +35,18 @@ export const OurCompanyImage = styled.img`
     border-radius: 10px;
     max-width: 100%;
 `;
+
+export const LearnMoreLink = styled.button`
+    text-decoration: none;
+    padding: 0;
+    border: none;
+`;
+
+export const LongLeftArrowButton = styled.button`
+    border: 2px solid #000093;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 4px 24px;
+    margin-left: 8px;
+`;
+

@@ -1,8 +1,31 @@
-import React from 'react';
-import { Widget } from '@typeform/embed-react'
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
+import { clearToken } from '../../Redux/actions/login';
+
 
 const DashboardPage = () => {
-    return <Widget id="OSEdDZpd" style={{ width: '100vw', height: '100vh' }} className="my-form" />
+    const [logoutClicked, setLogoutClicked] = useState();
+    const auth = useSelector(state => state.auth);
+    const history = useHistory();
+    const dispatch = useDispatch();
+
+    const onLogoutClicked = () => {
+        setLogoutClicked(true);
+        dispatch(clearToken());
+    }
+
+    useEffect(() => {
+        if (logoutClicked && auth.token === null) {
+            history.push('/login');
+        }
+    }, [logoutClicked, auth]);
+
+    return <div className="container-xxl">
+        <h1>Dashboard</h1>
+        <button className="btn btn-primary" onClick={onLogoutClicked}>Logout</button>
+    </div>
+
 };
 
 export default DashboardPage;

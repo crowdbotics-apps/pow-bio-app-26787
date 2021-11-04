@@ -14,6 +14,7 @@ export const Container = styled.div`
     font-weight: normal;
     line-height: 100%;
     color: #FFFFFF;
+    min-height: 342px;
 `;
 
 export const Number = styled.span`

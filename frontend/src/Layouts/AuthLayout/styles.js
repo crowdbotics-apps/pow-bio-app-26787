@@ -101,3 +101,7 @@ export const ContentInner = styled.div`
     width: 350px;
     height: auto;
 `;
+
+export const OverflowXHiddenDiv = styled.div`
+    overflow-x: hidden;
+`;

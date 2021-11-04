@@ -3,6 +3,7 @@ import DashboardContainer from "./Containers/DashboardContainer";
 
 import HomeContainer from "./Containers/HomeContainer";
 import LoginContainer from "./Containers/LoginContainer";
+import QuestionnaireContainer from "./Containers/QuestionnaireContainer";
 import SignupContainer from "./Containers/SignupContainer";
 
 const Routes = () => {
@@ -17,6 +18,9 @@ const Routes = () => {
                 </Route>
                 <Route path="/dashboard">
                     <DashboardContainer />
+                </Route>
+                <Route path="/questionnaire">
+                    <QuestionnaireContainer />
                 </Route>
                 <Route path="/">
                     <HomeContainer />

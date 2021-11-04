@@ -28,3 +28,11 @@ export const Paragraph = styled(SectionParagraph)`
     max-width: 815px;
     margin: 0 auto;
 `;
+
+export const MarginTopDiv = styled.div`
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 74px;
+`;
+
+

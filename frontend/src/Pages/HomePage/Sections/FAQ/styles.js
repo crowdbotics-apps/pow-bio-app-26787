@@ -27,3 +27,6 @@ export const Paragraph = styled(SectionParagraph)`
     text-align: center;
 `;
 
+export const MTDiv =  styled.div`
+    margin-top: 74px;
+`;

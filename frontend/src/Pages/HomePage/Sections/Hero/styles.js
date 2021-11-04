@@ -35,6 +35,7 @@ export const Section = styled.section`
 export const LinkButton = styled.button`
     text-decoration: none;
     color: #f8f9fa;
+    margin-left: 32px;
 `;
 
 export const Nav = styled.nav`

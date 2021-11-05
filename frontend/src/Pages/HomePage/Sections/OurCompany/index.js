@@ -18,7 +18,7 @@ const OurCompany = () => {
                     <div className="d-flex align-items-center">
                         <LearnMoreLink type="button" className="btn btn-link">
                             <span>Learn more</span>
-                            <LongLeftArrowButton><LongLeftArrow styles={{ marginTop: '-1px' }} /></LongLeftArrowButton>
+                            <LongLeftArrowButton><LongLeftArrow style={{ marginTop: '-1px' }} /></LongLeftArrowButton>
                         </LearnMoreLink>
                     </div>
                 </div>

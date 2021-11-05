@@ -49,9 +49,10 @@ export const CustomShapedEclipse = styled.div`
     width: 442px;
     height: 339px;
     background-image: url("data:image/svg+xml,%3Csvg width='442' height='339' viewBox='0 0 442 339' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M326.935 53.9158C241.965 38.7147 135.778 -21.8715 66.1071 8.31271C-3.56427 38.4969 -25.4576 102.306 36.0929 216.482C113.031 359.203 230.129 346.957 308.335 327.112C386.541 307.266 444.456 201.281 441.92 151.456C439.383 101.63 411.906 69.1168 326.935 53.9158Z' fill='${props => props.bgColor.replace("#", "%23")}'/%3E%3C/svg%3E%0A");
+    background-size: contain;
     z-index: 1;
     top: 65%;
-    left: 39%;
+    left: 45%;
     transform: translate(-50%, -50%);
 `;
 
@@ -60,6 +61,16 @@ export const FlexDiv = styled.div`
     justify-content: center;
     align-items: center;
     height: 100%;
+`;
+
+
+export const IllustrationContainer = styled.div`
+    min-width: 569px;
+    height: 434px;
+    position: relative;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 `;
 
 export const IllustrationImage = styled.img`

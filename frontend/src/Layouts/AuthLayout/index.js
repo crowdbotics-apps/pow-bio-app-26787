@@ -3,7 +3,7 @@ import { VHRow, ColIllustration, IllustrationImage, FlexDiv,
         LogoImage, LoginHeading, AuthPageDescription, ContentWrapper,
         ContentInner, StyledLinkZindex,
         BgCube,
-        CustomShapedEclipse, ZIndex5Div, BigFormCube, OverflowXHiddenDiv} from './styles';
+        CustomShapedEclipse, ZIndex5Div, BigFormCube, OverflowXHiddenDiv, IllustrationContainer} from './styles';
 import illustration from '../../Assets/images/login-illustration.png';
 import Logo from '../../Components/Logo';
 import { Link } from 'react-router-dom';
@@ -19,11 +19,13 @@ const AuthLayout = ({ children, pageTitle,
                 <ZIndex5Div className="container d-flex justify-content-start">
                     <StyledLinkZindex to="/"><Logo /></StyledLinkZindex>
                 </ZIndex5Div>
-                <FlexDiv>
-                    <IllustrationImage src={illustration} />
-                </FlexDiv>
-                <BgCube bgColor={cubeColor} />
-                <CustomShapedEclipse bgColor={eclipseColor} />
+                <IllustrationContainer>
+                    <FlexDiv>
+                        <IllustrationImage src={illustration} />
+                    </FlexDiv>
+                    <BgCube bgColor={cubeColor} />
+                    <CustomShapedEclipse bgColor={eclipseColor} />
+                </IllustrationContainer>
             </ColIllustration>
             <OverflowXHiddenDiv className="col-12 col-md-6">
                 <ContentWrapper className="d-flex justify-content-center align-items-center">

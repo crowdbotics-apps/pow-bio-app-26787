@@ -16,8 +16,10 @@ const OurCompany = () => {
                         Diam, phasellus at mi donec nisi, porttitor est, dictumst justo, ac, nunc facilisis enim consequat ac nulla sem orci nec, lorem amet sed proin pretium elementum tortor lobortis faucibus eget velit, cum ac sed blandit massa et venenatis morbi magna augue cursus nulla ornare sapien
                     </Paragraph>
                     <div className="d-flex align-items-center">
-                        <LearnMoreLink type="button" className="btn btn-link">Learn more</LearnMoreLink>
-                        <LongLeftArrowButton className="btn btn-outline-primary"><LongLeftArrow /></LongLeftArrowButton>
+                        <LearnMoreLink type="button" className="btn btn-link">
+                            <span>Learn more</span>
+                            <LongLeftArrowButton><LongLeftArrow styles={{ marginTop: '-1px' }} /></LongLeftArrowButton>
+                        </LearnMoreLink>
                     </div>
                 </div>
                 <div className="col-12 col-md-6">

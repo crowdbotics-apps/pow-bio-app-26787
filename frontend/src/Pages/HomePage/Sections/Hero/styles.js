@@ -40,6 +40,8 @@ export const LinkButton = styled.button`
 
 export const Nav = styled.nav`
     margin-bottom: 6rem;
+    padding-top: 0;
+    margin-top: 27px;
 `;
 
 export const Heading = styled(SectionHeading)`

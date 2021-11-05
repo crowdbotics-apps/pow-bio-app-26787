@@ -18,6 +18,7 @@ export const ColIllustration = styled.div`
 
 export const ZIndex5Div = styled.div`
     z-index: 5;
+    margin-top: 32px;
 `;
 
 export const BgCube = styled.div`

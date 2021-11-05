@@ -13,10 +13,10 @@ const AuthLayout = ({ children, pageTitle,
         bigCubeColor="rgba(224,87,43,0.07)",
         cubeColor="#1F1F65",
         eclipseColor="#292987" }) => {
-    return <div className="container-xxl">
+    return <div className="container-fluid">
         <VHRow className="row">
             <ColIllustration bgColor={bgColor} className="col-12 col-md-6">
-                <ZIndex5Div className="container d-flex justify-content-start mt-3">
+                <ZIndex5Div className="container d-flex justify-content-start">
                     <StyledLinkZindex to="/"><Logo /></StyledLinkZindex>
                 </ZIndex5Div>
                 <FlexDiv>

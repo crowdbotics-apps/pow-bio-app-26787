@@ -40,13 +40,23 @@ export const LearnMoreLink = styled.button`
     text-decoration: none;
     padding: 0;
     border: none;
+    color: #000093;
+    width: 158px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:hover span{
+        font-weight: 600;
+        color: #000093;
+    }
 `;
 
-export const LongLeftArrowButton = styled.button`
+export const LongLeftArrowButton = styled.span`
     border: 2px solid #000093;
     box-sizing: border-box;
     border-radius: 8px;
-    padding: 4px 24px;
+    padding: 1.1405px 16px;
     margin-left: 8px;
+    display: inline-block;
 `;
 
